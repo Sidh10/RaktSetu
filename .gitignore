@@ -1,0 +1,38 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# databases (demo DB is rebuilt by `make seed`)
+*.db
+*.db-journal
+*.sqlite3
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# parser evaluation runs that may contain raw LLM responses
+scripts/out/
+backend/tests/parser/runs/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# demo recordings (large; keep outside git)
+*.mp4
+*.mov

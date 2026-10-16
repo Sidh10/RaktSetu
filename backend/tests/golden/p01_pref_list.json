@@ -1,0 +1,304 @@
+{
+ "meta": {
+  "sim_file_sha256": "ae8229283256388720b7a17b6a32aef64eff232d3382024859a8dc7d7f581640",
+  "bands_file_sha256": "73a2da529c8bac5e3be39a124be70553297d7262ec65ac2a84edebe5f4634827",
+  "numpy": "2.5.4",
+  "python": "3.13.11",
+  "generated_at": "2026-10-15T16:15:16+00:00",
+  "generator_seed": 20261015,
+  "note": "SIMULATED; dev seeds only; never hand-edit"
+ },
+ "cases": [
+  {
+   "input": {
+    "g": 0,
+    "policy": "strict"
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "input": {
+    "g": 1,
+    "policy": "strict"
+   },
+   "expected": [
+    1
+   ]
+  },
+  {
+   "input": {
+    "g": 2,
+    "policy": "strict"
+   },
+   "expected": [
+    2
+   ]
+  },
+  {
+   "input": {
+    "g": 3,
+    "policy": "strict"
+   },
+   "expected": [
+    3
+   ]
+  },
+  {
+   "input": {
+    "g": 4,
+    "policy": "strict"
+   },
+   "expected": [
+    4
+   ]
+  },
+  {
+   "input": {
+    "g": 5,
+    "policy": "strict"
+   },
+   "expected": [
+    5
+   ]
+  },
+  {
+   "input": {
+    "g": 6,
+    "policy": "strict"
+   },
+   "expected": [
+    6
+   ]
+  },
+  {
+   "input": {
+    "g": 7,
+    "policy": "strict"
+   },
+   "expected": [
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 0,
+    "policy": "standard"
+   },
+   "expected": [
+    0,
+    2,
+    4,
+    6,
+    1,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 1,
+    "policy": "standard"
+   },
+   "expected": [
+    1,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 2,
+    "policy": "standard"
+   },
+   "expected": [
+    2,
+    6,
+    3,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 3,
+    "policy": "standard"
+   },
+   "expected": [
+    3,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 4,
+    "policy": "standard"
+   },
+   "expected": [
+    4,
+    6,
+    5,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 5,
+    "policy": "standard"
+   },
+   "expected": [
+    5,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 6,
+    "policy": "standard"
+   },
+   "expected": [
+    6,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 7,
+    "policy": "standard"
+   },
+   "expected": [
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 0,
+    "policy": "relaxed"
+   },
+   "expected": [
+    0,
+    2,
+    4,
+    6,
+    1,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "input": {
+    "g": 1,
+    "policy": "relaxed"
+   },
+   "expected": [
+    1,
+    3,
+    5,
+    7,
+    0,
+    2,
+    4,
+    6
+   ]
+  },
+  {
+   "input": {
+    "g": 2,
+    "policy": "relaxed"
+   },
+   "expected": [
+    2,
+    6,
+    3,
+    7,
+    4,
+    0,
+    5,
+    1
+   ]
+  },
+  {
+   "input": {
+    "g": 3,
+    "policy": "relaxed"
+   },
+   "expected": [
+    3,
+    7,
+    5,
+    1,
+    2,
+    6,
+    4,
+    0
+   ]
+  },
+  {
+   "input": {
+    "g": 4,
+    "policy": "relaxed"
+   },
+   "expected": [
+    4,
+    6,
+    5,
+    7,
+    2,
+    0,
+    3,
+    1
+   ]
+  },
+  {
+   "input": {
+    "g": 5,
+    "policy": "relaxed"
+   },
+   "expected": [
+    5,
+    7,
+    3,
+    1,
+    4,
+    6,
+    2,
+    0
+   ]
+  },
+  {
+   "input": {
+    "g": 6,
+    "policy": "relaxed"
+   },
+   "expected": [
+    6,
+    7,
+    2,
+    4,
+    0,
+    3,
+    5,
+    1
+   ]
+  },
+  {
+   "input": {
+    "g": 7,
+    "policy": "relaxed"
+   },
+   "expected": [
+    7,
+    3,
+    5,
+    1,
+    6,
+    2,
+    4,
+    0
+   ]
+  }
+ ]
+}

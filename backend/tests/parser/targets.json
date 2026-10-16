@@ -1,0 +1,19 @@
+{
+ "status": "FROZEN",
+ "frozen_on": "2026-10-16",
+ "approved": "Team Trex, in chat at Checkpoint E (16 Oct 2026), before any score on the test split",
+ "source": "docs/PARSER_SPEC.md sections 6.3 and 8",
+ "pass_fail": {
+  "critical_error_rate": {
+   "max": 0.0,
+   "applies_to": "test split, overall, for each parser path (rules; llm if run)",
+   "definition": "share of messages where a wrong blood group or wrong count could be committed without any review flag"
+  }
+ },
+ "reported_as_found": [
+  "item_exact", "item_precision", "group_acc", "count_acc", "expiry_acc", "component_acc", "type_acc",
+  "message_exact", "human_check_rate", "fallback_rate"
+ ],
+ "reporting": "overall with 95% bootstrap CIs (B = 10,000), and separately for hand-written (source=human) and template-generated (source=generated) messages, and by language",
+ "rule": "Do not edit after the test split has been scored. A failed target is reported as a failure, not re-tuned."
+}

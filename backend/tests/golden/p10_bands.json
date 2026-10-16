@@ -1,0 +1,2064 @@
+{
+ "meta": {
+  "sim_file_sha256": "ae8229283256388720b7a17b6a32aef64eff232d3382024859a8dc7d7f581640",
+  "bands_file_sha256": "73a2da529c8bac5e3be39a124be70553297d7262ec65ac2a84edebe5f4634827",
+  "numpy": "2.5.4",
+  "python": "3.13.11",
+  "generated_at": "2026-10-15T16:15:16+00:00",
+  "generator_seed": 20261015,
+  "note": "SIMULATED; dev seeds only; never hand-edit"
+ },
+ "cases": {
+  "thresholds": [
+   [
+    "Low",
+    0.0,
+    0.5
+   ],
+   [
+    "Medium",
+    0.5,
+    0.8
+   ],
+   [
+    "High",
+    0.8,
+    1.01
+   ]
+  ],
+  "cases": [
+   {
+    "input": 0.0,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4999,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5001,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7999,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8,
+    "expected": "High"
+   },
+   {
+    "input": 0.8001,
+    "expected": "High"
+   },
+   {
+    "input": 1.0,
+    "expected": "High"
+   },
+   {
+    "input": 0.044926189189604004,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4672061330330918,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8985223639755627,
+    "expected": "High"
+   },
+   {
+    "input": 0.4349765428085651,
+    "expected": "Low"
+   },
+   {
+    "input": 0.07553196564520659,
+    "expected": "Low"
+   },
+   {
+    "input": 0.516020493000135,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5509904984458751,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8324777590945327,
+    "expected": "High"
+   },
+   {
+    "input": 0.8850912390299152,
+    "expected": "High"
+   },
+   {
+    "input": 0.622399225874861,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5904722305446919,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8272940013848874,
+    "expected": "High"
+   },
+   {
+    "input": 0.9176957048017567,
+    "expected": "High"
+   },
+   {
+    "input": 0.019204593667508485,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9645561108024332,
+    "expected": "High"
+   },
+   {
+    "input": 0.06471189102935637,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4867546376222043,
+    "expected": "Low"
+   },
+   {
+    "input": 0.15438827719927029,
+    "expected": "Low"
+   },
+   {
+    "input": 0.21270290080389032,
+    "expected": "Low"
+   },
+   {
+    "input": 0.908681538960631,
+    "expected": "High"
+   },
+   {
+    "input": 0.09482495389189571,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7558186963020627,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.08295329717917788,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9297125028408054,
+    "expected": "High"
+   },
+   {
+    "input": 0.02096777555663165,
+    "expected": "Low"
+   },
+   {
+    "input": 0.09380943609551107,
+    "expected": "Low"
+   },
+   {
+    "input": 0.33593601417609054,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5103632423279683,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5507068979200321,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.042095464532363014,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3817251583228789,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7382961377771239,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7656651780134011,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.29332407790689796,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8310718936269809,
+    "expected": "High"
+   },
+   {
+    "input": 0.7111174771371623,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.09498273739632712,
+    "expected": "Low"
+   },
+   {
+    "input": 0.09896333678747027,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7919784225258375,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9836129607385784,
+    "expected": "High"
+   },
+   {
+    "input": 0.2498122118530346,
+    "expected": "Low"
+   },
+   {
+    "input": 0.16975005207956784,
+    "expected": "Low"
+   },
+   {
+    "input": 0.014145694815018595,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2623708583370834,
+    "expected": "Low"
+   },
+   {
+    "input": 0.1639779946443667,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5532425440567875,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.648013623021906,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.4075504532109986,
+    "expected": "Low"
+   },
+   {
+    "input": 0.36010234539070185,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5293017126691443,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6866544939573139,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3046831751152489,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4318115280094029,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2870945809076373,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2776438386209088,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9255355297078083,
+    "expected": "High"
+   },
+   {
+    "input": 0.06732628146345865,
+    "expected": "Low"
+   },
+   {
+    "input": 0.48724268618665323,
+    "expected": "Low"
+   },
+   {
+    "input": 0.05922114824414215,
+    "expected": "Low"
+   },
+   {
+    "input": 0.615624870434721,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.13813425604226948,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5285480483191305,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.32203875296163254,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5829388064083348,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.35379270535293095,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5256249325796356,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6913757491687601,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.12418697497654163,
+    "expected": "Low"
+   },
+   {
+    "input": 0.35707044328040816,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5251602047845805,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.1262303158867275,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3722707405464819,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7697463243381134,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.018553666796779167,
+    "expected": "Low"
+   },
+   {
+    "input": 0.00850407414913934,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7291786996317277,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7387530963916034,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3979020080609157,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6661637172418736,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.22847830959807724,
+    "expected": "Low"
+   },
+   {
+    "input": 0.22946269081622328,
+    "expected": "Low"
+   },
+   {
+    "input": 0.67375951451422,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9505505077693505,
+    "expected": "High"
+   },
+   {
+    "input": 0.22225415102011936,
+    "expected": "Low"
+   },
+   {
+    "input": 0.11807220307516075,
+    "expected": "Low"
+   },
+   {
+    "input": 0.0026270531993852764,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9561459923275119,
+    "expected": "High"
+   },
+   {
+    "input": 0.920547522608976,
+    "expected": "High"
+   },
+   {
+    "input": 0.33759596578543627,
+    "expected": "Low"
+   },
+   {
+    "input": 0.736369912886795,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.697654413531484,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.04288793709284333,
+    "expected": "Low"
+   },
+   {
+    "input": 0.41655727879609195,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3626139575062517,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5670685229023655,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7605059584091346,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2810261185867696,
+    "expected": "Low"
+   },
+   {
+    "input": 0.36742674036230005,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9739882999279699,
+    "expected": "High"
+   },
+   {
+    "input": 0.6565251662744533,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3902212329273985,
+    "expected": "Low"
+   },
+   {
+    "input": 0.06731605622259207,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9753990569666897,
+    "expected": "High"
+   },
+   {
+    "input": 0.43040727598753736,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6911403687558811,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7782608184616376,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9141905492434822,
+    "expected": "High"
+   },
+   {
+    "input": 0.13729566633830625,
+    "expected": "Low"
+   },
+   {
+    "input": 0.41473281349168534,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9486886535274471,
+    "expected": "High"
+   },
+   {
+    "input": 0.06014293928364933,
+    "expected": "Low"
+   },
+   {
+    "input": 0.003152448700972421,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7723008733980183,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.31959279493675175,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6167176566974707,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8707220170648169,
+    "expected": "High"
+   },
+   {
+    "input": 0.35921848150038904,
+    "expected": "Low"
+   },
+   {
+    "input": 0.22756073317145564,
+    "expected": "Low"
+   },
+   {
+    "input": 0.0752012827608497,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6838587347686733,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9256446448367177,
+    "expected": "High"
+   },
+   {
+    "input": 0.8874807836866448,
+    "expected": "High"
+   },
+   {
+    "input": 0.5651160568905308,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.45022048446287677,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7149460630124544,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.05369952821713864,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5009867342497264,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.4770843654042637,
+    "expected": "Low"
+   },
+   {
+    "input": 0.13052026516250648,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8189359562997262,
+    "expected": "High"
+   },
+   {
+    "input": 0.9398332094852921,
+    "expected": "High"
+   },
+   {
+    "input": 0.33744243710543487,
+    "expected": "Low"
+   },
+   {
+    "input": 0.0033017469449211356,
+    "expected": "Low"
+   },
+   {
+    "input": 0.10262316713157982,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3652074671724418,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8078884518072128,
+    "expected": "High"
+   },
+   {
+    "input": 0.8930323112794986,
+    "expected": "High"
+   },
+   {
+    "input": 0.6735506561210409,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7826427115501012,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6313042881947354,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9246960033728764,
+    "expected": "High"
+   },
+   {
+    "input": 0.43336361512790444,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5936022670368796,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3693977632043197,
+    "expected": "Low"
+   },
+   {
+    "input": 0.810617004629077,
+    "expected": "High"
+   },
+   {
+    "input": 0.27456453036983197,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9411577994202567,
+    "expected": "High"
+   },
+   {
+    "input": 0.5723177467028483,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.37612986205702026,
+    "expected": "Low"
+   },
+   {
+    "input": 0.111103050367657,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8618140416552753,
+    "expected": "High"
+   },
+   {
+    "input": 0.6836405337105025,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.029110956908210195,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7816775502067258,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2873397877095055,
+    "expected": "Low"
+   },
+   {
+    "input": 0.026142649769964055,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7135492697289276,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5719486098324997,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.23815435016970776,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8442184234148954,
+    "expected": "High"
+   },
+   {
+    "input": 0.015154137868732764,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9676582738770809,
+    "expected": "High"
+   },
+   {
+    "input": 0.846934262747345,
+    "expected": "High"
+   },
+   {
+    "input": 0.8795122729921173,
+    "expected": "High"
+   },
+   {
+    "input": 0.3481184313599859,
+    "expected": "Low"
+   },
+   {
+    "input": 0.1580134823308038,
+    "expected": "Low"
+   },
+   {
+    "input": 0.18828112439905087,
+    "expected": "Low"
+   },
+   {
+    "input": 0.681768893913278,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.482448188717699,
+    "expected": "Low"
+   },
+   {
+    "input": 0.03696127247037939,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9142093587870816,
+    "expected": "High"
+   },
+   {
+    "input": 0.5540752252176162,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.014880648168856592,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2266387870434693,
+    "expected": "Low"
+   },
+   {
+    "input": 0.17865766226245394,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9626546799842837,
+    "expected": "High"
+   },
+   {
+    "input": 0.615338813607295,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3974801145970063,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7556659889051063,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.44801574339616157,
+    "expected": "Low"
+   },
+   {
+    "input": 0.019219550647616934,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8956147374651992,
+    "expected": "High"
+   },
+   {
+    "input": 0.14984486482759674,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8285141962781964,
+    "expected": "High"
+   },
+   {
+    "input": 0.7025181765559418,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5851883806315836,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6740540108060626,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.4418640782581934,
+    "expected": "Low"
+   },
+   {
+    "input": 0.12002537227670318,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3975948484247094,
+    "expected": "Low"
+   },
+   {
+    "input": 0.257051065413623,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9153872844703622,
+    "expected": "High"
+   },
+   {
+    "input": 0.6611158329440845,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.34984182225943616,
+    "expected": "Low"
+   },
+   {
+    "input": 0.20376174512358658,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6095116240912049,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5718819151108145,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.13025049999206928,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2536224566448345,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7581689575188562,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6260286627233689,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.44829405468769734,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5444220636000832,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7606369092192936,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.12440149283956381,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5535947628223737,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.41965785093758234,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8707759719532158,
+    "expected": "High"
+   },
+   {
+    "input": 0.5582338079677128,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9062880502151651,
+    "expected": "High"
+   },
+   {
+    "input": 0.8029924356964073,
+    "expected": "High"
+   },
+   {
+    "input": 0.8798647518219563,
+    "expected": "High"
+   },
+   {
+    "input": 0.6463609335712052,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8454637906194783,
+    "expected": "High"
+   },
+   {
+    "input": 0.1644810297919026,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8289061844065689,
+    "expected": "High"
+   },
+   {
+    "input": 0.8900370800071615,
+    "expected": "High"
+   },
+   {
+    "input": 0.5536100004875968,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.476280351468502,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3047572053909846,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4036533474873192,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6018161109829839,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3496616974386726,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7521790285669339,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8251864088729108,
+    "expected": "High"
+   },
+   {
+    "input": 0.5437861102615112,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.975605202684982,
+    "expected": "High"
+   },
+   {
+    "input": 0.04184052920850001,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8433698596361715,
+    "expected": "High"
+   },
+   {
+    "input": 0.4182687540418909,
+    "expected": "Low"
+   },
+   {
+    "input": 0.43074340779173415,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4216059363102975,
+    "expected": "Low"
+   },
+   {
+    "input": 0.17080170847711584,
+    "expected": "Low"
+   },
+   {
+    "input": 0.05302118727048577,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7811125015349019,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.439880197159911,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6769435126508763,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7898305157524066,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.47611679594803724,
+    "expected": "Low"
+   },
+   {
+    "input": 0.17868853036637644,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9662712344706508,
+    "expected": "High"
+   },
+   {
+    "input": 0.3132747708163949,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9000267710836729,
+    "expected": "High"
+   },
+   {
+    "input": 0.5713271040539827,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2989699326417491,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3724530626032708,
+    "expected": "Low"
+   },
+   {
+    "input": 0.21712977975925718,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7101025283413444,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9372349433154461,
+    "expected": "High"
+   },
+   {
+    "input": 0.27499153567227885,
+    "expected": "Low"
+   },
+   {
+    "input": 0.04184207647088534,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6922308149046441,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.15595218942177402,
+    "expected": "Low"
+   },
+   {
+    "input": 0.25029969219274795,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8978171075414544,
+    "expected": "High"
+   },
+   {
+    "input": 0.975870926625039,
+    "expected": "High"
+   },
+   {
+    "input": 0.5968740627439297,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9778497524595539,
+    "expected": "High"
+   },
+   {
+    "input": 0.6900478438167726,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5406115591061441,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3168473256348707,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7081647692933746,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.726608252322114,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.24435814879864826,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6663497283893486,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.4660685268642737,
+    "expected": "Low"
+   },
+   {
+    "input": 0.04562586713019323,
+    "expected": "Low"
+   },
+   {
+    "input": 0.37435751417990026,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8530010501744708,
+    "expected": "High"
+   },
+   {
+    "input": 0.7194280665424201,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8679446335365354,
+    "expected": "High"
+   },
+   {
+    "input": 0.0239563029483435,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5143280347202781,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8596066926601929,
+    "expected": "High"
+   },
+   {
+    "input": 0.35180987643933403,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3843498321784722,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9587640386499668,
+    "expected": "High"
+   },
+   {
+    "input": 0.015797689758143774,
+    "expected": "Low"
+   },
+   {
+    "input": 0.0718767167525658,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8644352171814706,
+    "expected": "High"
+   },
+   {
+    "input": 0.3929005511435558,
+    "expected": "Low"
+   },
+   {
+    "input": 0.20858799348449109,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2416386910235372,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9945580020678685,
+    "expected": "High"
+   },
+   {
+    "input": 0.9685384861007029,
+    "expected": "High"
+   },
+   {
+    "input": 0.33150737568211863,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9967765259704958,
+    "expected": "High"
+   },
+   {
+    "input": 0.22836231455729417,
+    "expected": "Low"
+   },
+   {
+    "input": 0.29145071189262894,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8418985385530087,
+    "expected": "High"
+   },
+   {
+    "input": 0.8336717564059114,
+    "expected": "High"
+   },
+   {
+    "input": 0.4327641968103484,
+    "expected": "Low"
+   },
+   {
+    "input": 0.11961211226763868,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9420412691537984,
+    "expected": "High"
+   },
+   {
+    "input": 0.0010486690120440345,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7481280767246671,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9146718824047264,
+    "expected": "High"
+   },
+   {
+    "input": 0.8696110633353079,
+    "expected": "High"
+   },
+   {
+    "input": 0.5579459574660212,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6894378352498891,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.1362586607094457,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8698170834153783,
+    "expected": "High"
+   },
+   {
+    "input": 0.922733223404313,
+    "expected": "High"
+   },
+   {
+    "input": 0.0993614283578641,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7129808628134385,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8877286841138209,
+    "expected": "High"
+   },
+   {
+    "input": 0.9976025687630035,
+    "expected": "High"
+   },
+   {
+    "input": 0.004303119935956556,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9949560528308299,
+    "expected": "High"
+   },
+   {
+    "input": 0.9504890107304522,
+    "expected": "High"
+   },
+   {
+    "input": 0.04686621389238044,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9849499968781034,
+    "expected": "High"
+   },
+   {
+    "input": 0.1952889233090641,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7152701007764491,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5224467346039098,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8407914715358109,
+    "expected": "High"
+   },
+   {
+    "input": 0.04501839450962564,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6594393505760392,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7750190007844816,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8955645547001851,
+    "expected": "High"
+   },
+   {
+    "input": 0.019294584360683986,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6650267747052503,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8046023322210965,
+    "expected": "High"
+   },
+   {
+    "input": 0.4914721933196632,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6629964457558055,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5149678736454684,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2502556472115153,
+    "expected": "Low"
+   },
+   {
+    "input": 0.39626366189240236,
+    "expected": "Low"
+   },
+   {
+    "input": 0.40268329369812483,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8950747175769113,
+    "expected": "High"
+   },
+   {
+    "input": 0.31792088353947856,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7272072371895908,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5308566922202841,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.40238451061328295,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3168368138650165,
+    "expected": "Low"
+   },
+   {
+    "input": 0.47298548512026584,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7965593863043193,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9340298509164905,
+    "expected": "High"
+   },
+   {
+    "input": 0.1919431828526703,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5032414599416467,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3643685805209643,
+    "expected": "Low"
+   },
+   {
+    "input": 0.09825470147393522,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9181394747647839,
+    "expected": "High"
+   },
+   {
+    "input": 0.01183483324362522,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3384610447046268,
+    "expected": "Low"
+   },
+   {
+    "input": 0.899310699720156,
+    "expected": "High"
+   },
+   {
+    "input": 0.7797179349552038,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5279543377548466,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.44628806601604143,
+    "expected": "Low"
+   },
+   {
+    "input": 0.30306179413001855,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8446475180791383,
+    "expected": "High"
+   },
+   {
+    "input": 0.42757360400232103,
+    "expected": "Low"
+   },
+   {
+    "input": 0.794776851990341,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3693971893124781,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8367798735367451,
+    "expected": "High"
+   },
+   {
+    "input": 0.7019344813530579,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.864616088000172,
+    "expected": "High"
+   },
+   {
+    "input": 0.4121367798437796,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5119241677894271,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6301938812054343,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.31922707546465345,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8985818399417281,
+    "expected": "High"
+   },
+   {
+    "input": 0.028933976009959284,
+    "expected": "Low"
+   },
+   {
+    "input": 0.822195843408675,
+    "expected": "High"
+   },
+   {
+    "input": 0.7396415766113439,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.31694288084249866,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2105865592126983,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3055348900127265,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7844797000315622,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.024480697496312986,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8117175826619791,
+    "expected": "High"
+   },
+   {
+    "input": 0.26795079028912927,
+    "expected": "Low"
+   },
+   {
+    "input": 0.34837178269624014,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3200178351677604,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6477882988646645,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8746455211183045,
+    "expected": "High"
+   },
+   {
+    "input": 0.8625534516722878,
+    "expected": "High"
+   },
+   {
+    "input": 0.5421640824323658,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5102805490096286,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7224574178896721,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.20594629959462996,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8902497850525181,
+    "expected": "High"
+   },
+   {
+    "input": 0.04209404551008167,
+    "expected": "Low"
+   },
+   {
+    "input": 0.842821182003961,
+    "expected": "High"
+   },
+   {
+    "input": 0.04660005760391117,
+    "expected": "Low"
+   },
+   {
+    "input": 0.815194513042506,
+    "expected": "High"
+   },
+   {
+    "input": 0.5040825412178774,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6456489206300434,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7864401392028507,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8629899181469967,
+    "expected": "High"
+   },
+   {
+    "input": 0.32835753540826385,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5005763564636314,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6725672303423144,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3513301299261793,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7537565831538062,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2974351850475295,
+    "expected": "Low"
+   },
+   {
+    "input": 0.23337628783254283,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6674421610680589,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.31469355412557765,
+    "expected": "Low"
+   },
+   {
+    "input": 0.16982795258156447,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8710365712789135,
+    "expected": "High"
+   },
+   {
+    "input": 0.12592979677888883,
+    "expected": "Low"
+   },
+   {
+    "input": 0.550901821928185,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7736477386646807,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5172015637581575,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.3894098543850284,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3953861137654028,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5127255011528852,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.12061567930498929,
+    "expected": "Low"
+   },
+   {
+    "input": 0.08256672762234829,
+    "expected": "Low"
+   },
+   {
+    "input": 0.29745569881196887,
+    "expected": "Low"
+   },
+   {
+    "input": 0.10060404015721902,
+    "expected": "Low"
+   },
+   {
+    "input": 0.4665241932826736,
+    "expected": "Low"
+   },
+   {
+    "input": 0.3380771046633797,
+    "expected": "Low"
+   },
+   {
+    "input": 0.35730518538899714,
+    "expected": "Low"
+   },
+   {
+    "input": 0.04345421516109249,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7999618050202808,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.4907220878850497,
+    "expected": "Low"
+   },
+   {
+    "input": 0.43141364972762075,
+    "expected": "Low"
+   },
+   {
+    "input": 0.19554353487254283,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5562513184357445,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.45037249501505217,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5047932568875328,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.09111253246077355,
+    "expected": "Low"
+   },
+   {
+    "input": 0.27404736884279457,
+    "expected": "Low"
+   },
+   {
+    "input": 0.04220177282151816,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2867947636392565,
+    "expected": "Low"
+   },
+   {
+    "input": 0.034395437165574694,
+    "expected": "Low"
+   },
+   {
+    "input": 0.421055371664931,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8224706923870722,
+    "expected": "High"
+   },
+   {
+    "input": 0.9785109883607278,
+    "expected": "High"
+   },
+   {
+    "input": 0.37174137080132685,
+    "expected": "Low"
+   },
+   {
+    "input": 0.43485706474754215,
+    "expected": "Low"
+   },
+   {
+    "input": 0.99158248412268,
+    "expected": "High"
+   },
+   {
+    "input": 0.44156807736246173,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5262819845898439,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2441578011421286,
+    "expected": "Low"
+   },
+   {
+    "input": 0.21689674763506628,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6228200534895347,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9891398460515689,
+    "expected": "High"
+   },
+   {
+    "input": 0.8303299561898739,
+    "expected": "High"
+   },
+   {
+    "input": 0.9613965121986943,
+    "expected": "High"
+   },
+   {
+    "input": 0.1422095686333027,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6295511971710931,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6844799710703373,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.2752357493873847,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7704065565464744,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.37547995789863775,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8355123989443777,
+    "expected": "High"
+   },
+   {
+    "input": 0.9676695587377776,
+    "expected": "High"
+   },
+   {
+    "input": 0.5058511122940761,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5370260934061217,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8426665762031373,
+    "expected": "High"
+   },
+   {
+    "input": 0.9154063876872469,
+    "expected": "High"
+   },
+   {
+    "input": 0.16560336146892263,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6305340262114466,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.1442731276256134,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9983541764179193,
+    "expected": "High"
+   },
+   {
+    "input": 0.8142594127446666,
+    "expected": "High"
+   },
+   {
+    "input": 0.9312917992511085,
+    "expected": "High"
+   },
+   {
+    "input": 0.4951560816698163,
+    "expected": "Low"
+   },
+   {
+    "input": 0.7987216865904585,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7131096053636148,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8206609951492274,
+    "expected": "High"
+   },
+   {
+    "input": 0.06169000362413579,
+    "expected": "Low"
+   },
+   {
+    "input": 0.6915552275838012,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5151634336803852,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.8659162801128594,
+    "expected": "High"
+   },
+   {
+    "input": 0.5537117565879454,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.6398588072399956,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.26975454497011153,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8787104990771866,
+    "expected": "High"
+   },
+   {
+    "input": 0.3909541681943771,
+    "expected": "Low"
+   },
+   {
+    "input": 0.11803002624049053,
+    "expected": "Low"
+   },
+   {
+    "input": 0.12438720610747567,
+    "expected": "Low"
+   },
+   {
+    "input": 0.36078108248752216,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5771014418542764,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.5717031568236451,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.7523483511010053,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.06458106230746952,
+    "expected": "Low"
+   },
+   {
+    "input": 0.8324992763618748,
+    "expected": "High"
+   },
+   {
+    "input": 0.01508075091101957,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9286665370657855,
+    "expected": "High"
+   },
+   {
+    "input": 0.28503402180521664,
+    "expected": "Low"
+   },
+   {
+    "input": 0.827211028529361,
+    "expected": "High"
+   },
+   {
+    "input": 0.06393454514350816,
+    "expected": "Low"
+   },
+   {
+    "input": 0.5169839863677014,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.893666037451531,
+    "expected": "High"
+   },
+   {
+    "input": 0.18059020704796003,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9314418717563681,
+    "expected": "High"
+   },
+   {
+    "input": 0.824455267140954,
+    "expected": "High"
+   },
+   {
+    "input": 0.10277659518064897,
+    "expected": "Low"
+   },
+   {
+    "input": 0.9425271654682335,
+    "expected": "High"
+   },
+   {
+    "input": 0.5956979972847984,
+    "expected": "Medium"
+   },
+   {
+    "input": 0.9029234492373104,
+    "expected": "High"
+   },
+   {
+    "input": 0.3732041811627145,
+    "expected": "Low"
+   },
+   {
+    "input": 0.13970522049616063,
+    "expected": "Low"
+   },
+   {
+    "input": 0.2559649044921193,
+    "expected": "Low"
+   },
+   {
+    "input": 0.34321528130803924,
+    "expected": "Low"
+   },
+   {
+    "input": 0.24594632471322397,
+    "expected": "Low"
+   }
+  ]
+ }
+}

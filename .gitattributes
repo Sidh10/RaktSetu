@@ -1,0 +1,5 @@
+# Keep LF everywhere: frozen files (targets.json, test-set data, golden fixtures) are hashed byte-for-byte,
+# and CRLF conversion on checkout would make an unchanged file look edited.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
