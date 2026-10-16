@@ -63,23 +63,46 @@ make api                                          # serves UI + API on :8000 (au
 ### Before a demo
 
 1. `make seed` (or the seed command above). It re-anchors the **demo clock** at 09:00 IST today (ADR-013), so the
-   scripted suggestions in `docs/DEMO_SCRIPT.md` appear exactly. Re-seed shortly before presenting.
+   scripted suggestions in `docs/DEMO_SCRIPT.md` appear exactly. Re-seed shortly before presenting, and again after
+   every rehearsal: the demo changes the data. Re-seeding works while the API is running; reload the browser page.
+   (If you changed the database schema, stop the API first so the file can be recreated.)
 2. Optional LLM parsing: put `ANTHROPIC_API_KEY=...` in `.env` (copy `.env.example`; `.env` is git-ignored) or set it
    in the shell, then start the API. Without a key the rule-based parser is used; the demo works offline.
 3. Run through `docs/TESTING.md` §6 (pre-demo checklist).
 
 ### Tests and scripts
 
+Always run scripts with the project's virtual environment, not the system `python`: the venv is the only place the
+dependencies are guaranteed to be installed.
+
 ```bash
-make test                               # all backend tests (core, parity, API, parser, claims audit)
-make test-parity                        # golden parity tests only
-python scripts/demo_flow.py             # walk the demo flow through a running API, printing each step
-python scripts/parser_eval.py --split preview   # parser pipeline check on generated messages (not reportable)
-python scripts/parser_split.py          # parser test-set status; --freeze once the hand-written set is in
+make test                                        # all backend tests (core, parity, API, parser, claims audit)
+make test-parity                                 # golden parity tests; FAILS if the simulator folder is missing
+.venv/Scripts/python scripts/demo_flow.py        # walk the demo flow through a running API (needs a fresh `make seed`)
+.venv/Scripts/python scripts/parser_eval.py --split preview   # parser pipeline check (not reportable)
+.venv/Scripts/python scripts/parser_split.py     # parser test-set status; --freeze once the hand-written set is in
 ```
 
-In PowerShell, use `.\.venv\Scripts\python.exe` instead of `python`, and
-`.\.venv\Scripts\python.exe -m pytest backend/tests -q` instead of `make test`.
+- **Git Bash on Windows:** `.venv/Scripts/python` as above, or `source .venv/Scripts/activate` once per terminal.
+  macOS/Linux: `.venv/bin/python`.
+- **PowerShell:** `.\.venv\Scripts\python.exe scripts\demo_flow.py`, and
+  `.\.venv\Scripts\python.exe -m pytest backend/tests -q` instead of `make test`.
+- **`demo_flow.py` needs a freshly seeded city.** It runs the scripted transfers, so a second run stops with "not
+  freshly seeded" until you re-seed.
+
+### Simulator folder for the whole-run parity tests
+
+17 of the 23 parity tests replay complete simulator runs, so they need the **read-only simulator folder**:
+`RaktSetu_simulator_and_prototype/` placed next to `raktsetu-app/` (as in the team folder), or the environment
+variable `RAKTSETU_SIM_DIR` pointing at its `sim_v3` folder:
+
+```bash
+RAKTSETU_SIM_DIR=/path/to/RaktSetu_simulator_and_prototype/sim_v3 make test-parity
+```
+
+A fresh clone of this repository does not contain the simulator. Without it, `make test` still passes but **skips
+those 17 tests** and prints a red "WHOLE-RUN PARITY NOT CHECKED" banner; `make test-parity` fails instead. Only a
+run with the simulator present supports the claim that the prototype reproduces the simulator.
 
 ### Troubleshooting
 
@@ -90,7 +113,11 @@ In PowerShell, use `.\.venv\Scripts\python.exe` instead of `python`, and
 | UI says "API not reachable" or shows an old screen | The API is not running, or the UI was rebuilt: restart the API and reload the page. |
 | `No time zone found with key Asia/Kolkata` | Reinstall the backend dependencies (they include `tzdata`, which Windows needs). |
 | `npm` not found | Install Node.js 18+ and open a new terminal. |
-| Demo suggestions differ from the script | The demo clock moved on (units expired); re-run the seed. |
+| Demo suggestions differ from the script | The demo clock moved on (units expired) or a rehearsal changed the data; re-run the seed. |
+| `demo_flow.py`: "not freshly seeded" | Re-run the seed (works while the API is running), then run it again. |
+| Red "WHOLE-RUN PARITY NOT CHECKED" in test output | The simulator folder is missing; see "Simulator folder" above. |
+| `PermissionError` deleting `raktsetu_demo.db` | Older seed script with the API running: update, or stop the API and seed again. |
+| `UnicodeEncodeError` (cp1252) from a script | Older `demo_flow.py`; update, or set `PYTHONIOENCODING=utf-8`. |
 
 ## Repo map
 

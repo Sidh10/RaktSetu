@@ -34,7 +34,12 @@ def main():
             url = f"sqlite:///{path.as_posix()}"
         path.parent.mkdir(parents=True, exist_ok=True)
         if a.reset and path.exists():
-            path.unlink()
+            try:
+                path.unlink()
+            except PermissionError:
+                # Windows: the running API holds the file open. Every table is wiped and reloaded below anyway,
+                # so re-seed in place; only a schema change needs the API stopped and a real reset.
+                print("database file is in use (API running?): re-seeding in place instead of deleting it")
     engine = make_engine(url)
     init_db(engine)
     with make_sessionmaker(engine)() as session:

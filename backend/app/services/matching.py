@@ -118,9 +118,10 @@ def run(session: Session, actor: Actor, policy: str, now: datetime, settings: Se
             if n > 0:
                 g = gk % IDENTICAL_KEY_OFFSET
                 pol = "strict (identical only)" if gk >= IDENTICAL_KEY_OFFSET else policy
-                unmatched.append(dict(centre=cs[j].id, abo_rh=groups.GROUPS[g], component=comp, open=n,
-                                      why=f"no offerable {groups.GROUPS[g]} {comp} unit under {pol} policy "
-                                          "that can arrive with the 12-h margin"))
+                unmatched.append(dict(centre=cs[j].id, centre_name=cs[j].name, abo_rh=groups.GROUPS[g],
+                                      component=comp, open=n,
+                                      why=f"No offerable {groups.GROUPS[g]} {comp} unit under the {pol} policy "
+                                          "can arrive with the 12-h margin"))
 
     run_row.notes = sorted(set(notes))
     run_row.n_suggested = len(created)

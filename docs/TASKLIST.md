@@ -26,7 +26,7 @@ ADR-006 (and ideally all ADRs) are approved.
 | 1.2 | `backend/pyproject.toml` (FastAPI, SQLAlchemy, pydantic, anthropic; dev: pytest, httpx, numpy) and `make setup` | CC | 0.3 h | `make setup` works on Windows ✅ |
 | 1.3 | `scripts/gen_golden.py` + fixtures for P-01…P-07, P-09, P-10 | CC | 1 h | fixtures committed, each records the simulator SHA-256 ✅ |
 | 1.4 | Port into `core/`: groups & `pref_list`, `apportion`, `surplus_near`/`own_offerable`, view ageing, greedy ordering, margin, trust, finder ranking & bands | CC | 1.5 h | P-01…P-07, P-09, P-10 pass; core unit tests pass ✅ |
-| 1.5 | P-08 whole-run replay harness on dev seeds 9000–9004 | CC | 1.2 h | metric dicts identical for every case ✅ |
+| 1.5 | P-08 whole-run replay harness on dev seeds 9000–9004 | CC | 1.2 h | metric dicts identical for every case ✅ (needs the simulator folder; skipped with a warning in a bare clone, see README) |
 | 1.6 | Review the port side by side with the simulator (spot-check 3 functions) | H | 0.3 h | sign-off — **open** |
 
 ### ✋ Checkpoint B: parity
@@ -72,7 +72,7 @@ deliver, plus one forbidden action (staff approving → 403). **Go/no-go:** all 
 | 4.2 | Template generator for the remaining ~90 messages; split 50 dev / 100 test; freeze test hash | CC | 0.5 h | `test_set.sha256` committed — generator ✅; freeze waits for 4.1 |
 | 4.3 | Rule-based parser + post-checks + flags | CC | 1.5 h | parser unit tests pass on `PARSER_SPEC.md` §3 formats ✅ |
 | 4.4 | Mock channel endpoint, paste box, parser inbox with human check and commit | CC | 1.2 h | FR-P1, P4 pass; step 7 clickable ✅ |
-| 4.5 | LLM path (Claude API structured output, fallback) | CC | 0.8 h | `test_llm_failure_falls_back` passes; works with key ✅ |
+| 4.5 | LLM path (Claude API structured output, fallback) | CC | 0.8 h | `test_llm_failure_falls_back` passes; works with key — fallback and fake-client tests ✅; **live run with a real key NOT done** (no key available, Q4) |
 | 4.6 | Freeze targets (`PARSER_SPEC.md` §6.3), then run `make parser-eval` on the test split, rules and LLM | CC + H | 0.5 h | results JSON + summary; numbers quoted only from it — targets **frozen** 16 Oct ✅; scoring waits for 4.1 |
 
 ### ✋ Checkpoint E: parser evidence
@@ -97,7 +97,7 @@ No new features after this point; only fixes to failing tests or wrong copy.
 | Task | Pri | Est. |
 |---|---|---|
 | CSV upload (FR-L5) | P1 | 0.7 h |
-| Audit view (FR-X3) | P1 | 0.5 h |
+| ~~Audit view (FR-X3)~~ | — | built in Stage 3 (Audit log page) ✅ |
 | Postgres run of the API suite via docker-compose | P2 | 0.7 h |
 | GitHub Actions running `make test` | P2 | 0.4 h |
 | Par-gap hint on the board | P2 | 0.5 h |
@@ -108,7 +108,7 @@ No new features after this point; only fixes to failing tests or wrong copy.
 1. Stretch items above.
 2. LLM parser path and its eval (keep rules + its eval).
 3. Standard / relaxed policies in the UI (keep strict; API keeps them).
-4. CSV upload; audit view UI (audit rows still written).
+4. CSV upload. (The audit view UI is already built.)
 5. Dispatch / deliver screens (stop the visual demo at "approved"; API still tested end to end).
 
 Never cut: parity tests, state-machine and role tests, finder "bands only" test, the banner and labels, the claims

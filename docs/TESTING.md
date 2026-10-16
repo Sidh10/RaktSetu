@@ -65,8 +65,10 @@ Notes:
 - Not covered by parity: arms B (oracle) and D (adaptive), the LP matcher and the mis-specified error generators
   (none is used by the prototype), and the deliberate deviations S-01 … S-06 in `DECISIONS.md`, which are tested as
   product behaviour in §3.
-- P-08 needs numpy (dev dependency only) and the simulator folder (`RAKTSETU_SIM_DIR` overrides the default path);
-  without the simulator it is skipped, and the function-level tests still run from fixtures alone.
+- P-08 needs numpy (dev dependency only) and the simulator folder (`RAKTSETU_SIM_DIR` overrides the default path).
+  Without the simulator its 17 tests are skipped and the test summary prints a red "WHOLE-RUN PARITY NOT CHECKED"
+  banner; with `RAKTSETU_REQUIRE_SIM=1` (set by `make test-parity`) they fail instead. Found by the fresh-clone
+  check on 16 Oct: before this, a bare clone reported a green run while P-08 had silently not run.
 
 ## 3. Service and API tests (selected)
 

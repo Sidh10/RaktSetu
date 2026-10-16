@@ -18,7 +18,7 @@ help:
 	@echo "setup        create .venv and install backend deps (Stage 1)"
 	@echo "setup-web    npm install in frontend/ (Stage 3)"
 	@echo "test         run all backend tests"
-	@echo "test-parity  run golden parity tests only (Stage 1)"
+	@echo "test-parity  golden parity tests; FAILS if the simulator folder is missing"
 	@echo "golden       regenerate golden fixtures from the read-only simulator (Stage 1; needs numpy)"
 	@echo "seed         rebuild the SQLite demo DB from data/seed (Stage 2)"
 	@echo "api          run the API on :8000 (Stage 2)"
@@ -40,7 +40,7 @@ test:
 	$(VENV_PY) -m pytest backend/tests -q
 
 test-parity:
-	$(VENV_PY) -m pytest backend/tests/parity -q
+	RAKTSETU_REQUIRE_SIM=1 $(VENV_PY) -m pytest backend/tests/parity -q
 
 golden:
 	$(VENV_PY) scripts/gen_golden.py --sim-dir $(SIM_DIR) --out backend/tests/golden

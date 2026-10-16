@@ -48,7 +48,7 @@ export default function MatchPanel({ users, notify, lastRun, onRun }) {
           <h4>Last run · {lastRun.policy} · {lastRun.suggested.length} suggested</h4>
           {lastRun.notes.map((n, i) => <div key={i} className="list-item">⚠ {n}</div>)}
           {lastRun.unmatched_needs.map((u, i) => (
-            <div key={i} className="list-item">Not matched: {u.centre} still needs {u.open} × {u.abo_rh} {u.component}. {u.why}.</div>
+            <div key={i} className="list-item">Not matched: {u.centre_name} still needs {u.open} × {u.abo_rh} {u.component}. {u.why}.</div>
           ))}
           {lastRun.notes.length === 0 && lastRun.unmatched_needs.length === 0 && (
             <div className="list-item">Every open need was matched.</div>
