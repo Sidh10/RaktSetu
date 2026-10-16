@@ -22,7 +22,7 @@ ADR-006 (and ideally all ADRs) are approved.
 
 | # | Task | Owner | Est. | Acceptance |
 |---|---|---|---|---|
-| 1.1 | `git init`, private remote (if approved) | H | 0.2 h | repo exists — **open** (Q6) |
+| 1.1 | `git init`, private remote (if approved) | H | 0.2 h | local repo ✅ 16 Oct (`f277d10`); remote **open** (Q6) |
 | 1.2 | `backend/pyproject.toml` (FastAPI, SQLAlchemy, pydantic, anthropic; dev: pytest, httpx, numpy) and `make setup` | CC | 0.3 h | `make setup` works on Windows ✅ |
 | 1.3 | `scripts/gen_golden.py` + fixtures for P-01…P-07, P-09, P-10 | CC | 1 h | fixtures committed, each records the simulator SHA-256 ✅ |
 | 1.4 | Port into `core/`: groups & `pref_list`, `apportion`, `surplus_near`/`own_offerable`, view ageing, greedy ordering, margin, trust, finder ranking & bands | CC | 1.5 h | P-01…P-07, P-09, P-10 pass; core unit tests pass ✅ |

@@ -237,7 +237,7 @@ stock post that refreshes the listing age). The reviewer can switch either way b
 | Q3 | Can a transfusion-medicine specialist review `MATCHING_POLICY.md` (7 questions in §8) before Round 2? | the jury will ask; "not clinically validated" stays until then | Team | no (label covers it) |
 | Q4 | Do we have an Anthropic API key for the parser, and a spending cap? | LLM path and its eval; rules work without it | Team | no |
 | Q5 | Which machine runs the demo, and does it have Python 3.11+, Node 18+, make? Windows? | setup risk on the day | Team | no |
-| Q6 | Is the project in a git repository with a remote? (`E:\D\Hackathons\CodeApex\project` is not a git repo as of 15 Oct.) The deck/jury want a repo link. | repo link deliverable; history for the report | Team | soon |
+| Q6 | ~~Git repository~~ **Partly resolved 16 Oct 2026:** local git repo in `raktsetu-app/` (branch `main`, first commit `f277d10`). **Still open:** a remote (e.g. a private GitHub repo) for the repo link in the report. | repo link deliverable | Team | no |
 | Q7 | Who writes the ≥ 60 hand-written parser test messages (English + Hinglish), and who labels / double-checks? | avoids a circular parser test | Team | blocks Stage 4 eval |
 | Q8 | ~~Approve ADR-001…012~~ **Resolved 15 Oct 2026: all approved as recommended.** | — | Team | no |
 | Q9 | Should the demo show `standard` / `relaxed` policies at all, or only strict? | more to explain, more clinical risk in the story | Team | no |
