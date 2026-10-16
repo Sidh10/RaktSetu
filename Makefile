@@ -1,4 +1,4 @@
-# RaktSetu prototype commands. Works with GNU make on Windows (MSYS2 / Git Bash), Linux and macOS.
+# RaktSetu prototype commands. Needs GNU make: on Windows install it via MSYS2 (Git Bash alone has no make).
 # Each recipe is a single python / npm command, so it can be copied into PowerShell if make is missing.
 # Targets marked (Stage N) do nothing useful until that stage lands.
 

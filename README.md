@@ -36,6 +36,10 @@ Status words: **built** = runs and is tested; **mock** = a stand-in that is labe
 Tested on Windows 11 with Python 3.13.11 and Node 24.11.0 (16 Oct 2026). Needs Python 3.11+, Node 18+, internet
 for the first install, and about 1 GB of free memory: close heavy apps if Python reports `MemoryError`.
 
+**Install Python from <https://www.python.org/downloads/>** and tick "Add python.exe to PATH" in the installer. On
+some PCs `python` only opens the Microsoft Store placeholder; check with `python --version` (it must print 3.11 or
+newer) before the steps below. Install Node.js LTS from <https://nodejs.org/>.
+
 ### First run, PowerShell (no `make` needed)
 
 From the `raktsetu-app` folder:
@@ -52,12 +56,26 @@ npm --prefix frontend run build
 Open <http://localhost:8000>. Pick a role in **Acting as**; the public finder needs no role. API docs are at
 <http://localhost:8000/docs>. Stop the server with Ctrl+C.
 
-### Same steps with `make` (Git Bash / MSYS2)
+That is all the demo needs: the built UI is served by the API. Only when you are **changing the UI**, run the Vite
+dev server in a second PowerShell window (hot reload; it forwards `/api` to the API on port 8000):
+
+```powershell
+npm --prefix frontend run dev
+```
+
+then open <http://localhost:5173>. Rebuild (`npm --prefix frontend run build`) before the demo so port 8000 serves
+the latest UI.
+
+### Same steps with `make` (needs GNU make)
+
+**Git Bash alone does not include `make`.** Install it through MSYS2 (<https://www.msys2.org/>, then
+`pacman -S make`) and make sure it is on your PATH, or use the PowerShell steps above, which need no `make`.
 
 ```bash
 make setup && make setup-web && make build-web   # once
 make seed                                         # every time you want a fresh demo city
 make api                                          # serves UI + API on :8000 (auto-reload)
+make web                                          # optional: UI dev server on :5173 while changing the UI
 ```
 
 ### Before a demo
