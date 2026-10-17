@@ -7,6 +7,7 @@ import AuditView from "./components/AuditView.jsx";
 import MyCentre from "./components/MyCentre.jsx";
 import Inbox from "./components/Inbox.jsx";
 import Toast from "./components/Toast.jsx";
+import Home from "./components/Home.jsx";
 
 const PAGES = [
   { id: "board", label: "Coordinator board", roles: ["coordinator", "centre_staff", "medical_officer"] },
@@ -15,12 +16,13 @@ const PAGES = [
   { id: "trust", label: "Report trust", roles: ["coordinator", "medical_officer"] },
   { id: "audit", label: "Audit log", roles: ["coordinator"] },
   { id: "finder", label: "Public platelet finder", roles: ["coordinator", "centre_staff", "medical_officer", "public"] },
+  { id: "home", label: "About RaktSetu", roles: ["coordinator", "centre_staff", "medical_officer", "public"] },
 ];
 
 const ROLE_LABEL = { coordinator: "Coordinator", centre_staff: "Centre staff", medical_officer: "Medical officer" };
 
 function pageFromHash() {
-  return window.location.hash.replace("#/", "") || "";
+  return window.location.hash.replace("#/", "") || "home";
 }
 
 export default function App() {
@@ -58,6 +60,8 @@ export default function App() {
     setPage(id);
   };
 
+  useEffect(() => { window.scrollTo(0, 0); }, [current.id]);
+
   const chooseUser = (id) => {
     setUserId(id);
     savePref("raktsetu.user", id);
@@ -66,52 +70,71 @@ export default function App() {
 
   const notify = useCallback((t) => setToast(t), []);
 
-  return (
-    <div className="shell">
-      <div className="banner" role="note">
-        <b>Simulated data</b> · <b>mock channel</b> · <b>not clinically validated</b>
-        <span>Fictional centres and people. Every transfer needs a medical officer's approval.</span>
-      </div>
-      <div className="top">
-        <div className="logo">
-          RaktSetu<span>Platelet bridge · simulated 8-centre city</span>
-        </div>
-        <div className="who">
-          {health && (
-            <span className="tag" title="Seeded demo clock: starts at 09:00 IST when the city is seeded (ADR-013)">
-              {health.demo_clock ? "Demo clock" : "Clock"} {istTime(health.now)} IST{health.demo_clock ? " (simulated)" : ""}
-            </span>
-          )}
-          <label htmlFor="who">Acting as</label>
-          <select id="who" value={userId} onChange={(e) => chooseUser(e.target.value)}>
-            <option value="">Public (no login)</option>
-            {users.map((u) => (
-              <option key={u.id} value={u.id}>
-                {ROLE_LABEL[u.role]} · {u.display_name}
-              </option>
-            ))}
-          </select>
-          <span className="tag">Demo users · not real authentication</span>
-        </div>
-      </div>
-      <nav className="nav" aria-label="Pages">
-        {allowed.map((p) => (
-          <button key={p.id} className={p.id === current.id ? "on" : ""} onClick={() => go(p.id)}>
-            {p.label}
-          </button>
-        ))}
-      </nav>
-      {current.id === "board" && <Board key={userId} user={user} users={users} notify={notify} />}
-      {current.id === "inbox" && <Inbox key={userId} user={user} notify={notify} />}
-      {current.id === "centre" && <MyCentre key={userId} user={user} notify={notify} />}
-      {current.id === "trust" && <TrustView key={userId} />}
-      {current.id === "audit" && <AuditView key={userId} />}
-      {current.id === "finder" && <Finder />}
-      <div className="foot">
-        Prototype for VIT Code_Apex 3.0, Team Trex. Outcome numbers quoted anywhere come from the v3 simulator and are
-        simulated. Matching rules encode DGHS/NBTC 2023 and SNBTS guidance and await specialist review.
-      </div>
-      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+  const labels = (
+    <div className="labels" role="note">
+      <span><b>Simulated data</b> · <b>mock channel</b> · <b>not clinically validated</b></span>
+      <span>Fictional centres and people. Every transfer needs a medical officer's approval.</span>
     </div>
+  );
+
+  if (current.id === "home") {
+    return (
+      <>
+        {labels}
+        <Home />
+        {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+      </>
+    );
+  }
+
+  return (
+    <>
+      {labels}
+      <header className="appbar">
+        <div className="row">
+          <a className="logo" href="#/home" title="About RaktSetu">
+            RaktSetu<span>Platelet bridge · simulated 8-centre city</span>
+          </a>
+          <div className="who">
+            {health && (
+              <span className="tag" title="Seeded demo clock: starts at 09:00 IST when the city is seeded (ADR-013)">
+                {health.demo_clock ? "Demo clock" : "Clock"} {istTime(health.now)} IST{health.demo_clock ? " (simulated)" : ""}
+              </span>
+            )}
+            <label htmlFor="who">Acting as</label>
+            <select id="who" value={userId} onChange={(e) => chooseUser(e.target.value)}>
+              <option value="">Public (no login)</option>
+              {users.map((u) => (
+                <option key={u.id} value={u.id}>
+                  {ROLE_LABEL[u.role]} · {u.display_name}
+                </option>
+              ))}
+            </select>
+            <span className="tag">Demo users · not real authentication</span>
+          </div>
+        </div>
+        <nav className="nav" aria-label="Pages">
+          {allowed.filter((p) => p.id !== "home").map((p) => (
+            <button key={p.id} className={p.id === current.id ? "on" : ""} onClick={() => go(p.id)}>
+              {p.label}
+            </button>
+          ))}
+        </nav>
+      </header>
+      <main className="shell">
+        {current.id === "board" && <Board key={userId} user={user} users={users} notify={notify} />}
+        {current.id === "inbox" && <Inbox key={userId} user={user} notify={notify} />}
+        {current.id === "centre" && <MyCentre key={userId} user={user} notify={notify} />}
+        {current.id === "trust" && <TrustView key={userId} />}
+        {current.id === "audit" && <AuditView key={userId} />}
+        {current.id === "finder" && <Finder />}
+        <div className="foot">
+          Prototype for VIT Code_Apex 3.0, Team Trex. Outcome numbers quoted anywhere come from the v3 simulator and are
+          simulated. Matching rules encode DGHS/NBTC 2023 and SNBTS guidance and await specialist review.{" "}
+          <a href="#/home">About RaktSetu</a>
+        </div>
+      </main>
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+    </>
   );
 }

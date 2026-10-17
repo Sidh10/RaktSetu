@@ -74,10 +74,10 @@ export default function TransferCard({ t, user, notify, onChanged }) {
         <span className={`chip ${t.sender_band}`}>Sender trust {t.sender_band}</span>
         <span className="chip">{t.tier === 0 ? "ABO/RhD identical" : `Non-identical · ${t.policy} policy`}</span>
         {t.anti_d_flag && <span className="chip bad">Anti-D consideration</span>}
-        <span className="chip">One-hop rule ✓</span>
+        <span className="chip">One-hop rule met</span>
         {minHours !== null ? (
           <span className={`chip ${minHours >= 12 ? "" : "bad"}`}>
-            {minHours >= 12 ? "≥ 12 h on arrival ✓" : "< 12 h on arrival"} (min {minHours} h)
+            {minHours >= 12 ? "≥ 12 h on arrival" : "< 12 h on arrival"} (min {minHours} h)
           </span>
         ) : (
           <span className="chip">Transport estimate {t.transport_min} min</span>

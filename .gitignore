@@ -41,3 +41,6 @@ Thumbs.db
 deck_r2/node_modules/
 deck_r2/out/render/
 deck_r2/out/*.pdf
+
+# tasteskill working files (direction sheet, inspector screenshots)
+.taste-skill/

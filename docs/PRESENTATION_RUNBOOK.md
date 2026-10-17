@@ -14,7 +14,8 @@ inside 10 minutes. Paths starting `sim_v3/` or `out_v3/` are in `RaktSetu_simula
    A memory WARN means: close more apps.
 3. Then **`.venv\Scripts\python.exe scripts\demo_start.py`**. It re-seeds the city (demo clock 09:00 IST), starts the
    server and opens `http://localhost:8000/#/board`. Leave that window open.
-4. Browser zoom 125% for the projector. Open a second tab at `http://localhost:8000/#/finder`.
+4. Browser zoom 125% for the projector. Open a second tab at `http://localhost:8000/` (the public front page, with the
+   live finder in its second section).
 5. Have the backup ready: `docs/demo_screens/` (screenshots of every step), and your recorded video if you made one.
 6. **After any rehearsal, run `demo_start.py` again**: the demo changes the data, and re-seeding resets it.
 
@@ -47,7 +48,7 @@ Start: `http://localhost:8000/#/board`, **Acting as: Coordinator**, freshly seed
 | 4 | **Acting as → Staff, Centre F** → **Confirm** (2 of 2). Then click **Approve dispatch**. | Red toast "refused (403)": "Staff cannot approve; the backend enforces it." |
 | 5 | **Acting as → Medical officer, Centre F** → **Approve dispatch**. | "A medical officer approves every transfer, and the 12-hour margin is checked again." |
 | 6 | **Acting as → Coordinator** → card **Centre G → Centre A** → **Request confirmation**. **Acting as → Staff, Centre G** → set *Units actually available* to **1** → **Confirm**. | "The stale listing said 2; only 1 is really there. Every confirmation updates that centre's trust." (Toast shows α and β.) |
-| 7 | Second tab, **Public platelet finder**, **B+** → **Search**. | "Families see High, Medium or Low, never a percentage, and always 'call before travelling'." |
+| 7 | Second tab, the front page: **Find platelets** → click **B+**. (Or the app's **Public platelet finder** page: **B+** → **Search**.) | "Families see High, Medium or Low, never a percentage, and always 'call before travelling'." |
 
 If there is more time, continue from `DEMO_SCRIPT.md` (dispatch and deliver, one-hop rule, message inbox, audit).
 

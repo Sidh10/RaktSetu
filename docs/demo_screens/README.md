@@ -11,7 +11,7 @@ running app, seeded with `scripts/demo_start.py` (demo clock 09:00 IST). Files 0
 | 2 | `02_matcher_suggestions.jpg` | Strict match: F → C 2 × O+ (High) and G → A 2 × B+ (Low); Centre H's unit excluded by the 12-h margin | "Near-expiry surplus only, strict blood groups; H's unit would arrive with under 12 h left." |
 | 3 | `03_staff_confirms.jpg` | Staff, Centre F sees only its own transfer and confirms the units really there | "No courier moves on a listing alone." |
 | 4 | `04_staff_approval_refused.jpg` | Staff clicks Approve: red toast "refused (403 forbidden_role)" | "Only a medical officer can approve; the backend enforces it." |
-| 5 | `05_officer_approved.jpg` | Medical officer approves; chip "≥ 12 h on arrival ✓ (min 13.5 h)"; dispatch next | "The 12-hour margin is checked again at approval and dispatch." |
+| 5 | `05_officer_approved.jpg` | Medical officer approves; chip "≥ 12 h on arrival (min 13.5 h)"; dispatch next | "The 12-hour margin is checked again at approval and dispatch." |
 | 6 | `06_report_trust.png` | Report trust table: Centre G's "2+ days old" row moved to α 6, β 7 after confirming only 1 of 2 | "Every confirmation updates that centre's trust. No decay, every outcome counts." |
 | 7 | `07_inbox_draft_flags.png` | Mock-channel message parsed into a draft: "kal" resolved and flagged, B+ "expiry missing", Commit disabled | "The parser only drafts; a person checks every draft before stock changes." |
 | 8 | `08_audit_log.png` | Append-only audit log of the whole run: who, role, change, when | "Every step is logged." |
