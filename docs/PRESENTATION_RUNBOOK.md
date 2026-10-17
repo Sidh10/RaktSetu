@@ -56,9 +56,9 @@ looks wrong, run `demo_start.py` again (about 5 seconds) and reload.
 
 ## 3. What to say about Round 2 (the deck predates the prototype)
 
-The v3 deck was written before the prototype existed, so some slides still say it is not built. Either update those
-slides, or say the corrections below out loud when you reach them. **Do not leave them uncorrected.** The jury
-penalised the static UI in Round 1.
+**Present from the Round 2 deck: `deck_r2/out/RaktSetu_TeamTrex_CodeApex3_Round2.pptx`.** It is the v3 deck with slides
+3–6 replaced to show what is built (slides 1, 2, 7, 8 are byte-identical to v3). If you must use the old v3 deck,
+say the corrections below out loud when you reach those slides. The jury penalised the static UI in Round 1.
 
 | Deck (`out_v3/RaktSetu_TeamTrex_CodeApex3_v3.pdf`) | Now true; say this |
 |---|---|
@@ -69,7 +69,7 @@ penalised the static UI in Round 1.
 
 How we know the prototype is the same model as our results (one sentence):
 "The matching and trust code is ported from the simulator and checked by golden parity tests. It reproduces 2,342
-recorded cases and 17 complete 180-day simulated runs exactly, day by day. There are 223 automated tests in all."
+recorded cases and 17 complete 180-day simulated runs exactly, day by day. There are over 200 automated tests."
 (`backend/tests/golden/`, `docs/TESTING.md` §2.)
 
 **Parser accuracy.** Say only one of these:

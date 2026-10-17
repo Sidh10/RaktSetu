@@ -1,0 +1,8 @@
+{
+  "name": "raktsetu-deck-r2",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Round 2 deck: v3 deck with slides 3-6 replaced to show the built prototype (simulated data)",
+  "scripts": { "build": "node build_deck_r2.js && python postprocess.py out/RaktSetu_TeamTrex_CodeApex3_Round2.pptx" },
+  "dependencies": { "pptxgenjs": "4.0.1" }
+}

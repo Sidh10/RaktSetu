@@ -76,8 +76,8 @@ From the demo run (`docs/DEMO_SCRIPT.md`; simulated city in `data/seed/demo_city
 - **Stale listing.** Centre G listed 2 units but confirmed only 1. Its trust counters for 2-day-old listings move
   from α 5, β 6 to α 6, β 7, and Centre A's remaining need reopens automatically.
 
-Automated: **223** backend tests pass. That is 106 core, 23 parity, 42 API and 52 claims-audit checks, run per
-folder on 16 Oct (`make test`). The claims audit fails the build if a forbidden claim, such as "clinically
+Automated: **225** backend tests pass. That is 106 core, 23 parity, 42 API and 54 claims-audit checks, run per
+folder on 17 Oct (`make test`). The claims audit fails the build if a forbidden claim, such as "clinically
 validated" or a percentage in the finder, appears anywhere a user or judge would see it.
 
 ## 6. Evidence 3: the parser (placeholder: fill only from the frozen test run)
@@ -140,7 +140,7 @@ medical-officer approval enforced · one-hop rule · 12-h margin (our choice) ·
 likelihood bands · message parser with human check (mock channel).
 
 **"Same model as our results"**: Ported trust and matcher code reproduces the simulator exactly: 2,342 function cases
-and 17 whole 180-day runs, identical day by day; injected bugs are caught. 223 automated tests.
+and 17 whole 180-day runs, identical day by day; injected bugs are caught. 200+ automated tests.
 
 **"What we do not claim"**: Simulated data · mock channel · not clinically validated · no real-world outcome measured
 yet · parser accuracy: [fill from frozen test run].

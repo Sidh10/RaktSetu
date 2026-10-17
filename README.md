@@ -87,6 +87,8 @@ make web                                          # optional: UI dev server on :
 
 Run the second command again between rehearsals to reset the city. The 10-minute plan, a 3-minute demo path and
 what to say is in `docs/PRESENTATION_RUNBOOK.md`; backup screenshots are in `docs/demo_screens/`.
+Present from the Round 2 deck `deck_r2/out/RaktSetu_TeamTrex_CodeApex3_Round2.pptx` (slides 3–6 updated to show the
+built prototype; see `deck_r2/README.md`).
 
 ### Before a demo
 

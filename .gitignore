@@ -36,3 +36,8 @@ Thumbs.db
 # demo recordings (large; keep outside git)
 *.mp4
 *.mov
+
+# Round 2 deck build
+deck_r2/node_modules/
+deck_r2/out/render/
+deck_r2/out/*.pdf
