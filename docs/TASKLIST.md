@@ -84,10 +84,10 @@ Report accuracy with CIs, critical errors, human-check rate. **Go/no-go:** criti
 |---|---|---|---|---|
 | 5.1 | Claims audit test + manual read of every screen | CC + H | 0.5 h | test green; no forbidden phrase — claims-audit test ✅ (52 checks); manual read of every screen: **open** (human) |
 | 5.2 | README: run instructions, status table updated to "built / mock / planned" truthfully | CC | 0.4 h | a teammate runs it from scratch on Windows — written and verified from a clean copy on 16 Oct ✅; teammate run: **open** |
-| 5.3 | Rehearse `DEMO_SCRIPT.md` twice, timed | H | 0.7 h | ≤ 5 min |
-| 5.4 | Record the backup video (screen + voice), and step screenshots | H | 0.8 h | file on desktop + USB |
+| 5.3 | Rehearse `DEMO_SCRIPT.md` twice, timed | H | 0.7 h | ≤ 5 min — 10-minute plan + 3-minute demo path in `docs/PRESENTATION_RUNBOOK.md` ✅; timed rehearsal **open** (human) |
+| 5.4 | Record the backup video (screen + voice), and step screenshots | H | 0.8 h | file on desktop + USB — backup screenshots 01–09 in `docs/demo_screens/` ✅ (17 Oct); video still **open** (human) |
 | 5.5 | Report / slide inserts: what is built, parity result, parser result, limits | CC + H | 1 h | every number cites a file — `docs/REPORT_INSERTS.md` ✅; parser numbers to fill after the frozen test run |
-| 5.6 | Pre-demo checklist on the demo machine (`TESTING.md` §6) | H | 0.4 h | all items ticked |
+| 5.6 | Pre-demo checklist on the demo machine (`TESTING.md` §6) | H | 0.4 h | all items ticked — automated by `scripts/demo_start.py --check` ✅ (17 Oct: 0 FAIL, 1 WARN memory); run it on the demo machine: **open** |
 
 ### ✋ Checkpoint F: feature freeze (end of Day 3)
 No new features after this point; only fixes to failing tests or wrong copy.

@@ -12,7 +12,7 @@ endif
 
 SIM_DIR := ../RaktSetu_simulator_and_prototype/sim_v3
 
-.PHONY: help setup setup-web test test-parity golden seed api web build-web dev parser-eval clean
+.PHONY: help setup setup-web test test-parity golden seed api web build-web dev parser-eval clean demo demo-check
 
 help:
 	@echo "setup        create .venv and install backend deps (Stage 1)"
@@ -26,6 +26,8 @@ help:
 	@echo "build-web    build the UI into frontend/dist for FastAPI to serve (Stage 3)"
 	@echo "dev          print the two commands to run API and UI side by side"
 	@echo "parser-eval  parser accuracy on the frozen test split (Stage 4)"
+	@echo "demo         demo day: checks, fresh seed, API + UI on :8000, opens the browser"
+	@echo "demo-check   pre-demo checks only (memory, port, UI build, tests)"
 	@echo "clean        remove caches and the demo DB"
 
 setup:
@@ -67,3 +69,9 @@ parser-eval:
 
 clean:
 	$(PY_SYS) -c "import pathlib,shutil; [shutil.rmtree(p, ignore_errors=True) for p in pathlib.Path('.').rglob('__pycache__')]; [shutil.rmtree(p, ignore_errors=True) for p in pathlib.Path('.').rglob('.pytest_cache')]; [p.unlink() for p in pathlib.Path('data').glob('*.db')]"
+
+demo:
+	$(VENV_PY) scripts/demo_start.py
+
+demo-check:
+	$(VENV_PY) scripts/demo_start.py --check

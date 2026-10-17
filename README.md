@@ -78,6 +78,16 @@ make api                                          # serves UI + API on :8000 (au
 make web                                          # optional: UI dev server on :5173 while changing the UI
 ```
 
+### Demo day: one command
+
+```powershell
+.\.venv\Scripts\python.exe scripts\demo_start.py --check   # memory, port, UI build, tests (want 0 FAIL)
+.\.venv\Scripts\python.exe scripts\demo_start.py           # fresh seed, API + UI on :8000, opens the browser
+```
+
+Run the second command again between rehearsals to reset the city. The 10-minute plan, a 3-minute demo path and
+what to say is in `docs/PRESENTATION_RUNBOOK.md`; backup screenshots are in `docs/demo_screens/`.
+
 ### Before a demo
 
 1. `make seed` (or the seed command above). It re-anchors the **demo clock** at 09:00 IST today (ADR-013), so the

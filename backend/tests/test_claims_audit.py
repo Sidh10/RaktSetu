@@ -12,7 +12,7 @@ SCANNED = (
     [p for p in (ROOT / "frontend" / "src").rglob("*") if p.suffix in (".js", ".jsx", ".css", ".html")]
     + [p for p in (ROOT / "backend" / "app").rglob("*.py")]
     + [ROOT / "data" / "seed" / "demo_city.json", ROOT / "README.md", ROOT / "docs" / "DEMO_SCRIPT.md"]
-    + [p for p in [ROOT / "docs" / "REPORT_INSERTS.md"] if p.exists()]
+    + [p for p in [ROOT / "docs" / "REPORT_INSERTS.md", ROOT / "docs" / "PRESENTATION_RUNBOOK.md"] if p.exists()]
 )
 
 FORBIDDEN = {
