@@ -81,6 +81,14 @@ def test_health_carries_labels(api):
     assert h["labels"] == ["simulated data", "mock channel", "not clinically validated"] and h["demo_clock"]
 
 
+def test_page_shell_is_revalidated_but_api_is_not_marked(api):
+    from app.main import DIST
+    assert "Cache-Control" not in api.get("/api/health").headers
+    if (DIST / "index.html").exists():          # the built UI is optional in a fresh clone
+        r = api.get("/")
+        assert r.status_code == 200 and r.headers["Cache-Control"] == "no-cache"
+
+
 def test_finder_bands_only_ranked_and_read_only(api):
     tables = [t.name for t in Base.metadata.sorted_tables]
 

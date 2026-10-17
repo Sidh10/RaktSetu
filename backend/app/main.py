@@ -50,6 +50,14 @@ def create_app(settings: Settings | None = None, engine=None) -> FastAPI:
         return JSONResponse(status_code=400, content=dict(error=dict(
             code="validation_error", message="request body or parameters are invalid", details=dict(errors=errs))))
 
+    @app.middleware("http")
+    async def revalidate_page_shell(request: Request, call_next):
+        # index.html names the hashed bundles; a cached copy would keep serving an old UI after a rebuild.
+        response = await call_next(request)
+        if response.headers.get("content-type", "").startswith("text/html"):
+            response.headers["Cache-Control"] = "no-cache"
+        return response
+
     app.include_router(router)
     if DIST.exists():   # Stage 3: built UI served from the same process
         app.mount("/", StaticFiles(directory=DIST, html=True), name="ui")
